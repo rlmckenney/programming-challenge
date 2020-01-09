@@ -23,6 +23,6 @@ let randomIntegers = Array.from(
 )
 
 console.log(
-  'A sorted array of 100 random numbers between 1 and 99 (inclusive)\n'
+  '---\nA sorted array of 100 random numbers between 1 and 99 (inclusive)\n'
 )
 console.log(sortNumbers(randomIntegers))
