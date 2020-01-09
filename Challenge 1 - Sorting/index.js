@@ -22,4 +22,7 @@ let randomIntegers = Array.from(
   () => Math.floor(Math.random() * 99) + 1
 )
 
+console.log(
+  'A sorted array of 100 random numbers between 1 and 99 (inclusive)\n'
+)
 console.log(sortNumbers(randomIntegers))
