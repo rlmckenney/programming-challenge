@@ -21,10 +21,19 @@ function isPalindrome (source) {
 }
 
 console.log(
-  'The largest palindrome made from the product of two 3-digit numbers is\n'
+  '---\nThe largest palindrome made from the product of two 3-digit numbers is\n'
 )
+let solution = {
+  x: 0,
+  y: 0,
+  product: 0
+}
 for (let x = 999; x > 99; x--) {
   for (let y = 999; y > 99; y--) {
-    if (isPalindrome(x * y)) return console.log(`${x * y} = ${x} * ${y}`)
+    const product = x * y
+    if (product > solution.product && isPalindrome(product)) {
+      solution = { x, y, product }
+    }
   }
 }
+console.log(`${solution.product} = ${solution.x} * ${solution.y}`)
